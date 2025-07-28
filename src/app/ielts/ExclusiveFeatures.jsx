@@ -31,20 +31,22 @@ const ExclusiveFeatureCard = ({ features }) => (
         </div>
         
         {index < features.length - 1 && (
-          <div className="border-b border-gray-200 mx-4"></div>
+          <div className="border-b border-gray-200"></div>
         )}
       </div>
     ))}
   </div>
 );
 
-const ExclusiveFeatures = ({ features, title = "Course Exclusive Feature" }) => {
+const ExclusiveFeatures = ({ features, title = "কোর্স এক্সক্লুসিভ ফিচার" }) => {
   if (!features?.length) return null;
 
   return (
     <section className="mt-8">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6">{title}</h2>
-      <ExclusiveFeatureCard features={features} />
+      <h2 className="text-2xl font-semibold">{title}</h2>
+      <div className="mt-2">
+        <ExclusiveFeatureCard features={features} />
+      </div>
     </section>
   );
 };

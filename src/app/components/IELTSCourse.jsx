@@ -53,8 +53,8 @@ export default async function IELTSCourse() {
             <InstructorSection instructors={sections.instructors} />
             <FeaturesSection features={sections.features} />
             <LearningPoints points={sections.pointers} />
+             <CourseDetails items={sections.about} />
             <ExclusiveFeatures features={sections.feature_explanations} />
-            <CourseDetails items={sections.about} />
           </div>
 
           <CourseSidebar checklist={data.checklist} />
