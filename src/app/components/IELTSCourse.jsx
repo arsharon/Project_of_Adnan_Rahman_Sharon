@@ -1,5 +1,11 @@
 import React from 'react';
 import CourseHeader from './CourseHeader';
+import InstructorSection from './InstructorSection';
+import FeaturesSection from './FeaturesSection';
+import LearningPoints from './LearningPoints';
+import ExclusiveFeatures from './ExclusiveFeatures';
+import CourseDetails from './CourseDetails';
+import CourseSidebar from './CourseSidebar';
 
 const fetchCourseData = async () => {
   const res = await fetch(
@@ -42,6 +48,17 @@ export default async function IELTSCourse() {
           price="৳1000"
         />
 
+        <div className='flex flex-col-reverse md:flex-row gap-9 pr-9 pl-9'>
+          <div className='w-full md:w-2/3'>
+            <InstructorSection instructors={sections.instructors} />
+            <FeaturesSection features={sections.features} />
+            <LearningPoints points={sections.pointers} />
+            <ExclusiveFeatures features={sections.feature_explanations} />
+            <CourseDetails items={sections.about} />
+          </div>
+
+          <CourseSidebar checklist={data.checklist} />
+        </div>
       </main>
     </div>
   );
