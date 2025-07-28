@@ -1,4 +1,5 @@
 import React from 'react';
+import CourseHeader from './CourseHeader';
 
 const fetchCourseData = async () => {
   const res = await fetch(
@@ -33,6 +34,14 @@ export default async function IELTSCourse() {
   return (
     <div>
       <main className="w-full md:w-10/12 mx-auto">
+        <CourseHeader
+          title={data.title}
+          description={data.description}
+          media={data.media}
+          ctaText={data.cta_text}
+          price="৳1000"
+        />
+
       </main>
     </div>
   );
