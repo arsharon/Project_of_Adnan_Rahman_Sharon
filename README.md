@@ -21,6 +21,7 @@ This project displays IELTS course information retrieved from an external API. U
 ## 🚀 Technologies Used
 
 - [Next.js 15 (App Router)](https://nextjs.org/)
+- [TypeScript]
 - [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [React Icons](https://react-icons.github.io/react-icons/)
